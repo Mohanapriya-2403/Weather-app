@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
+import { motion, AnimatePresence } from "framer-motion"; 
 
 function Weather() {
   const [city, setcity] = useState("");
@@ -26,7 +26,7 @@ function Weather() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#1a1c1e] p-6">
-      {/* ANIMATION: Card slides up and fades in */}
+      
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ function Weather() {
             className="w-64 px-4 py-2 rounded-md border-none text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-700 shadow-inner"
           />
           
-          {/* ANIMATION: Button scales up on hover */}
+          
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -55,7 +55,7 @@ function Weather() {
           </motion.button>
         </div>
 
-        {/* ANIMATION: Results pop in only when 'weather' exists */}
+        
         <AnimatePresence>
           {weather && (
             <motion.div 
